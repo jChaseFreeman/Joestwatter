@@ -1,0 +1,46 @@
+
+<!--<h1>Joe's Twatts</h1>-->
+
+    <% @twatts.each do |twatt| %>
+      <div class="row">
+        <h3><%= twatt.name %></h3>
+        <p><%= twatt.content %></p>
+        <h6 class="subheader"><%= link_to time_ago_in_words(twatt.created_at), twatt %> </h6>
+
+        <ul class="button-group radius">
+          <li><%= link_to 'Show', twatt, class: "button tiny" %></li>
+          <li><%= link_to 'Edit', edit_twatt_path(twatt), class: "button tiny" %></li>
+          <li><%= link_to 'Destroy', twatt, method: :delete, data: { confirm: 'Are you sure?' }, class: "button tiny" %></li>
+        </ul>
+
+        <hr>
+      </div>
+    <% end %>
+  
+<br>
+<!--
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @twatts.each do |twatt| %>
+      <tr>
+        <td><%= twatt.name %></td>
+        <td><%= twatt.content %></td>
+        <td><%= link_to 'Show', twatt %></td>
+        <td><%= link_to 'Edit', edit_twatt_path(twatt) %></td>
+        <td><%= link_to 'Destroy', twatt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to time_ago_in_words(twatt.created_at), twatt %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+-->
+
